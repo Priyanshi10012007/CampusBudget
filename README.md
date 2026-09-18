@@ -1,156 +1,96 @@
-# Student Expense Tracker
+# CampusBudget 
 
-## About the Project
+## 📱 About the Project
 
-Student Expense Tracker is a simple Android application developed using Android Studio and Kotlin. The purpose of this project is to help students record their daily expenses and keep track of their monthly spending.
+CampusBudget is a simple Android application that I developed to help students manage their monthly budget and daily expenses.
 
-The application allows users to add expenses by entering the amount, category, and date. The expenses are saved locally and can be viewed or deleted later. Users can also set a monthly budget and check their total spending and remaining budget.
+The app allows a student to set a monthly budget, add expenses, view transaction history, and check basic expense analysis. A separate parent login is also provided so that parents can view the student's spending information.
 
-## Features
+This project was developed as part of my Mobile Application Development (MAD) assignment.
 
-* Add new expenses
-* Enter expense amount
-* Enter category manually
-* Enter date manually
-* View saved expenses
-* Delete expenses
-* Set monthly budget
-* Calculate total spending
-* Calculate remaining budget
-* Store data locally
+---
 
-## Screens
+## 🎯 Main Features
 
-### 1. Home Screen
+### Student
+- Student Login
+- Set Monthly Budget
+- Add Expense
+- View Transaction History
+- Delete Expense
+- View Expense Analysis
+- View Total Spent
+- View Remaining Budget
 
-Shows:
+### Parent
+- Parent Login
+- View Student Budget
+- View Student Spending
+- View Transactions
+- View Expense Analysis
 
-* Total Spent
-* Monthly Budget
-* Remaining Budget
-* Add Expense
-* View Expenses
-* Set Budget
+---
 
-### 2. Add Expense
+## 🛠️ Technologies Used
 
-Users can enter:
+- Android Studio
+- Kotlin
+- XML
+- SQLite
+- SQLiteOpenHelper
+- SharedPreferences
+- RecyclerView
+- Git & GitHub
 
-* Amount
-* Category
-* Date
+---
 
-### 3. View Expenses
+## 🗄️ Database
 
-Displays all saved expenses using RecyclerView. Each expense also has a Delete button.
+I used **SQLite** to store expense information locally on the device.
 
-### 4. Monthly Budget
+The `expenses` table contains:
 
-Allows the user to enter and save a monthly budget.
+| Field | Description |
+|---|---|
+| id | Unique expense ID |
+| amount | Expense amount |
+| category | Expense category |
+| description | Expense description |
+| date | Date and time of expense |
 
-## Technologies Used
+I used **SharedPreferences** to store the monthly budget.
 
-* **Android Studio** – Development environment
-* **Kotlin** – Programming language
-* **XML** – User interface design
-* **RecyclerView** – Displaying expenses
-* **SharedPreferences** – Local data storage
-* **JSON** – Storing expense data
-* **Intent** – Moving between screens
-* **Toast** – Showing messages
+---
 
-## Data Storage
+## 📱 Application Screens
 
-The application does not use an online database. Expense and budget data are stored locally on the device using SharedPreferences.
+The application contains the following screens:
 
-Expense details are stored in JSON format, for example:
+1. Login Screen
+2. Student Dashboard
+3. Parent Dashboard
+4. Monthly Budget
+5. Add Expense
+6. Transaction History
+7. Expense Analysis
 
-```json
-[
-  {
-    "amount": 250,
-    "category": "Food",
-    "date": "15/09/2026"
-  }
-]
-```
+---
 
-## Calculation
-
-The total spending is calculated by adding all saved expenses.
-
-**Remaining Budget = Monthly Budget − Total Spent**
-
-For example:
+## 🔄 Application Flow
 
 ```text
-Monthly Budget = ₹2000
-Total Spent    = ₹500
-Remaining      = ₹1500
-```
-
-## Project Structure
-
-```text
-StudentExpense
-│
-├── app
-│   └── src
-│       └── main
-│           ├── java
-│           │   └── com.example.studentexpense
-│           │       ├── MainActivity.kt
-│           │       ├── AddExpenseActivity.kt
-│           │       ├── ExpenseActivity.kt
-│           │       ├── ExpenseAdapter.kt
-│           │       └── BudgetActivity.kt
-│           │
-│           └── res
-│               ├── drawable
-│               └── layout
-│
-├── README.md
-├── build.gradle.kts
-└── settings.gradle.kts
-```
-
-## Requirements
-
-* Android Studio
-* Kotlin
-* Android SDK
-* Android device or emulator
-* Minimum SDK: API 24
-
-## How to Run
-
-1. Download or clone this repository.
-2. Open the project in Android Studio.
-3. Wait for Gradle sync to complete.
-4. Connect an Android device or start an emulator.
-5. Click the **Run** button.
-6. The application will start on the device.
-
-## Future Improvements
-
-The project can be improved in the future by adding:
-
-* Expense charts
-* Search and filter options
-* Edit expense
-* Monthly reports
-* Export expenses
-* Notifications and reminders
-
-## Author
-
-**Priyanshi Modi**
-
-**Project:** Student Expense Tracker
-**Platform:** Android
-**Language:** Kotlin
-**IDE:** Android Studio
-
-## Purpose
-
-This project was developed as a college project to understand the basics of Android application development and to practice working with Android components, layouts, local storage, and multiple activities.
+Login
+  │
+  ├── Student
+  │     ↓
+  │  Student Dashboard
+  │     ├── Set Budget
+  │     ├── Add Expense
+  │     ├── Transaction History
+  │     └── Expense Analysis
+  │
+  └── Parent
+        ↓
+     Parent Dashboard
+        ├── View Transactions
+        └── View Expense Analysis
