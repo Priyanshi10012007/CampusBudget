@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_inner">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expense Analysis"
+            android:textColor="#174A7E"
+            android:textSize="29sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Understand where your money goes"
+            android:textColor="#6380A0"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"/>
+
+
+        <!-- Budget -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dashboard_card"
+            android:padding="18dp"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MONTHLY BUDGET"
+                android:textColor="#6380A0"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAnalysisBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Budget: ₹0.00"
+                android:textColor="#174A7E"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Spent -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dashboard_card"
+            android:padding="18dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL SPENT"
+                android:textColor="#6380A0"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAnalysisSpent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spent: ₹0.00"
+                android:textColor="#174A7E"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Remaining -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dashboard_card"
+            android:padding="18dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REMAINING"
+                android:textColor="#6380A0"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAnalysisRemaining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remaining: ₹0.00"
+                android:textColor="#174A7E"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Category -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/dashboard_card"
+            android:padding="20dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category Analysis"
+                android:textColor="#174A7E"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCategoryAnalysis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No expenses yet"
+                android:textColor="#5D7897"
+                android:textSize="17sp"
+                android:layout_marginTop="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
