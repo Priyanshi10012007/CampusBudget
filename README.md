@@ -73,6 +73,14 @@ The application contains the following screens:
 5. Add Expense
 6. Transaction History
 7. Expense Analysis
+   <img src="assets/deshbord.png" width="200">
+<img src="assets/student_dashbord.png" width="200">
+<img src="assets/parent_dashbord.png" width="200">
+<img src="assets/budget.png" width="200">
+<img src="assets/histroy.png" width="200">
+<img src="assets/anaylais.png" width="200">
+<img src="assets/add_expances.png" width="200">
+<img src="assets/expance_anlaysis.png" width="200">
 
 ---
 
